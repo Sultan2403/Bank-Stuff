@@ -8,14 +8,19 @@
 </head>
 
 <body>
-    <h1>Transfer Money</h1>
+    <h1>Deposit Money</h1>
     <a href="./index.html">Go to homepage</a>
 
     <form>
-        <input type="number" name="acc-num" id="acc-num">
-        <label for="acc-num">Enter account num here</label>
+        <input type="number" name="deposit" id="deposit-inp-field">
+        <label for="deposit">Enter deposit amount here</label>
+        <input type="number" name="acc-id" id="acc-id">
+        <label for="acc-id">Enter account ID here</label>
+        <button id="deposit-btn" type="button">Deposit Money</button>
+        <div id="display-area"></div>
     </form>
     <p>N.B: Only inter-bank transfers are allowed for the meantime</p>
+    <script type="module" src="./deposit.js"></script>
 </body>
 
 </html>
