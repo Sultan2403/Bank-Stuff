@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Page</title>
+</head>
+
+<body>
+    <h1>Withdraw Money</h1>
+    <a href="../index.html">Go to homepage</a>
+    <form>
+        <label for="acc-id-inp-field">Enter account ID here</label>
+        <input type="number" name="acc-id" id="acc-id-inp-field">
+        <label for="withdrawal-inp-field">Enter withdrawal amount here</label>
+        <input type="number" name="withdraw" id="withdrawal-inp-field">
+
+
+        <button id="withdraw-btn" type="button">Withdraw Money</button>
+    </form>
+    <div id="display-area"></div>
+    <div class="help">
+        <p>N.B: Once your withdrawal is successful, you will receive a confirmation email.</p>
+        <p> You can then head to one of our local branches to get your cash.</p>
+    </div>
+    <script type="module" src="../Scripts/withdraw.js"></script>
+</body>
+
+</html>
