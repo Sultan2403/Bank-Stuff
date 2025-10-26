@@ -51,7 +51,8 @@ function withdrawMoney(accID, withdrawAmt) {
     console.log("⚠️ Insufficient funds!");
     return;
   }
-  const currBal = (foundAcc.balance -= withdrawAmt); // Update balance
+  const feeRate = 0.01;
+  const currBal = (foundAcc.balance -= withdrawAmt) * feeRate; // Update balance
   display.textContent = `Dear ${foundAcc.accHolder}, you have successfully withdrawn money from your account. Your current balance is: $${currBal}`;
   console.log(
     `Dear ${foundAcc.accHolder}, you have successfully withdrawn money from your account. your current balance is: $${currBal}`
