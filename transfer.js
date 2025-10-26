@@ -16,23 +16,23 @@ function transferFunds(fromAccId, toAccId, amount) {
 
   if (!fromAccount) {
     console.log("Invalid account IDs.");
-    display.textContent = "Invalid sender account ID.";
+    display.textContent = "⚠️ Invalid sender account ID.";
     return;
   }
 
   if (!toAccount) {
     console.log("Invalid account IDs.");
-    display.textContent = "Invalid recipient account ID.";
+    display.textContent = "⚠️ Invalid recipient account ID.";
     return;
   }
 
   if (fromAccount === toAccount) {
-    display.textContent = "Cannot transfer to the same account.";
+    display.textContent = "⚠️ Cannot transfer to the same account.";
     return;
   }
 
   if (isNaN(amount) || amount <= 0) {
-    display.textContent = "Enter a valid transfer amount.";
+    display.textContent = "⚠️ Enter a valid transfer amount.";
     return;
   }
 
