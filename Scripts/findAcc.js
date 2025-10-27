@@ -11,12 +11,13 @@ function getUsers() {
   }
 }
 getUsers(); // Call to retrieve users
+const display = document.getElementById("display"); // Display area
 
 // Getting DOM elements
-const balanceBtn = document.getElementById("checkBalBtn");
-const AccID = document.getElementById("acc-id");
-const display = document.getElementById("display-area");
-function chkBal(accID) {
+const findBtn = document.getElementById("findBtn");
+const AccID = document.getElementById("AccId");
+
+function findAcc(accID) {
   if (!/^\d+$/.test(accID) || accID <= 0) {
     // Validate account ID
     display.textContent = `⚠️ Enter a valid account ID!`;
@@ -30,21 +31,29 @@ function chkBal(accID) {
     console.log("Account Not Found!");
     return;
   }
-  display.textContent = `Dear ${
-    foundAcc.accHolder
-  }, your balance is $${foundAcc.balance.toFixed(
-    // Display balance
-    2
-  )}. Thanks for using ${bankName} services!`;
+  display.innerHTML = `Account Holder: ${foundAcc.accHolder}<br>
+  Account ID: ${foundAcc.accId}<br>
+  Account Type: ${foundAcc.type} <br>
+   Balance: $${foundAcc.balance.toFixed(
+     // Display balance
+     2
+   )}<br>
+    <br> Thanks for using ${bankName}!`;
   console.log(
-    `Dear ${foundAcc.accHolder}, your balance is $${foundAcc.balance.toFixed(
-      2
-    )}. Thanks for using ${bankName}!`
+    `Account Holder ${foundAcc.accHolder}<br>
+  Account ID: ${foundAcc.accId}<br>
+  Account Type: ${foundAcc.type}<br>
+   Balance: $${foundAcc.balance.toFixed(
+     // Display balance
+     2
+   )}<br>
+    <br> Thanks for using ${bankName}!`
   );
 }
-balanceBtn.addEventListener(
+findBtn.addEventListener(
   "click",
   () =>
     // Event listener for balance button
-    chkBal(parseInt(AccID.value.trim())) // Call check balance function
+    findAcc(parseInt(AccID.value.trim())) // Call check balance function
 );
+console.log(localStorage.getItem("customers"));
