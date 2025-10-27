@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
     <title>Transfer Page</title>
 </head>
 
@@ -11,12 +12,18 @@
     <h1>Transfer Money</h1>
     <a href="../index.html">Go to homepage</a>
     <form>
-        <label for="fromAccId">Enter Sender Account ID:</label>
-        <input name="fromAccId" type="number" id="fromAccId">
-        <label for="toAccId">Enter Receiver Account ID:</label>
-        <input type="number" name="toAccId" id="toAccId">
-        <label for="amount">Enter Amount:</label>
-        <input type="number" name="amount" id="amount">
+        <div>
+            <input name="fromAccId" type="number" id="fromAccId" placeholder=" ">
+            <label for="fromAccId">Enter Sender Account ID:</label>
+        </div>
+        <div>
+            <input type="number" name="toAccId" id="toAccId" placeholder=" ">
+            <label for="toAccId">Enter Receiver Account ID:</label>
+        </div>
+        <div>
+            <input type="number" name="amount" id="amount" placeholder=" ">
+            <label for="amount">Enter Amount:</label>
+        </div>
         <button id="transferBtn" type="button">Transfer Money</button>
     </form>
     <p>N.B: Only inter-bank transfers are allowed for the meantime</p>

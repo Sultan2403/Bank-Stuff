@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
     <title>Withdrawal Page</title>
 </head>
 
@@ -11,12 +12,14 @@
     <h1>Withdraw Money</h1>
     <a href="../index.html">Go to homepage</a>
     <form>
-        <label for="acc-id-inp-field">Enter account ID here</label>
-        <input type="number" name="acc-id" id="acc-id-inp-field">
-        <label for="withdrawal-inp-field">Enter withdrawal amount here</label>
-        <input type="number" name="withdraw" id="withdrawal-inp-field">
-
-
+        <div>
+            <input type="number" name="acc-id" id="acc-id-inp-field" placeholder=" ">
+            <label for="acc-id-inp-field">Enter account ID here</label>
+        </div>
+        <div>
+            <input type="number" name="withdraw" id="withdrawal-inp-field" placeholder=" ">
+            <label for="withdrawal-inp-field">Enter withdrawal amount here</label>
+        </div>
         <button id="withdraw-btn" type="button">Withdraw Money</button>
     </form>
     <div id="display-area"></div>

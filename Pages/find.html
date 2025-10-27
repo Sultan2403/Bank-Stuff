@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
     <title>Find An Account</title>
 </head>
 
@@ -11,9 +12,13 @@
     <h1>Find an account</h1>
     <a href="../index.html">Go to homepage</a>
     <form>
+        <div>
+            <input type="number" name="toAccId" id="AccId" placeholder=" ">
+            <label for="AccId">Enter Account ID:</label>
+        </div>
 
-        <label for="AccId">Enter Account ID:</label>
-        <input type="number" name="toAccId" id="AccId">
+
+
 
         <button id="findBtn" type="button">Find Account</button>
     </form>
