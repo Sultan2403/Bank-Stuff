@@ -70,11 +70,11 @@ label {
 
 input:focus + label,
 input:not(:placeholder-shown) + label {
-  color: rgb(38, 38, 131);
+  color: blue;
   top: -1rem;
   background-color: rgb(196, 235, 231);
   padding: auto 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 input:focus,
