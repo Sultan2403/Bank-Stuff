@@ -130,3 +130,9 @@ div {
   font-size: 1.6rem;
   font-weight: 500;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
